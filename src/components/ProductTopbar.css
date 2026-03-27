@@ -2,15 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 0; /* Vertical padding only, assuming a container handles sides */
-  margin: 0 40px;  /* Or match your site's side margins */
+  padding: 25px 0;
+  margin: 0 40px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-  background: #ffffff; /* Clean white background */
+  background: #ffffff;
   font-family: sans-serif;
 }
 
-/* LEFT SECTION */
 .topbar-left {
   display: flex;
   align-items: center;
@@ -38,14 +37,13 @@
 .filter-text {
   font-size: 13px;
   color: #888;
-  text-decoration: underline; /* Exactly like the image */
+  text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* RIGHT SECTION (Dropdown) */
 .sort-dropdown {
   position: relative;
-   font-weight: 600;
+  font-weight: 600;
 }
 
 .sort-dropdown summary {
@@ -58,17 +56,14 @@
   gap: 10px;
 }
 
-/* Removes default arrow in Safari/Chrome */
 .sort-dropdown summary::-webkit-details-marker {
   display: none;
 }
 
 .arrow-down {
   font-size: 12px;
-  font-weight: 400;
 }
 
-/* DROPDOWN BOX */
 .dropdown-menu {
   position: absolute;
   right: 0;
@@ -85,7 +80,6 @@
   display: block;
   padding: 12px 25px;
   font-size: 13px;
-  font-weight: 400;
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
@@ -93,4 +87,72 @@
 
 .dropdown-menu a:hover {
   background: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .product-topbar {
+    margin: 0 20px;
+    padding: 18px 0;
+  }
+
+  .topbar-left {
+    gap: 20px;
+  }
+
+  .items-count {
+    font-size: 13px;
+  }
+
+  .filter-text {
+    font-size: 12px;
+  }
+
+  .sort-dropdown summary {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 15px;
+    padding: 15px 0;
+  }
+
+  .topbar-left {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .items-count {
+    font-size: 12px;
+  }
+
+  .filter-text {
+    font-size: 11px;
+  }
+
+  .sort-dropdown {
+    width: 100%;
+  }
+
+  .sort-dropdown summary {
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    right: 0;
+    text-align: left;
+  }
+
+  .dropdown-menu a {
+    padding: 12px 16px;
+    font-size: 12px;
+  }
 }

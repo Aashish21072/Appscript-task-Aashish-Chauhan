@@ -1,10 +1,29 @@
 .product-grid {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
   flex: 1;
+  transition: all 0.3s ease;
 }
 
-.product-grid {
-  flex: 1;
-  display: grid;
+.product-grid.with-sidebar {
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* more spacing like design */
+}
+
+.product-grid.full-width {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+  .product-grid.with-sidebar,
+  .product-grid.full-width {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid.with-sidebar,
+  .product-grid.full-width {
+    grid-template-columns: 1fr;
+  }
 }

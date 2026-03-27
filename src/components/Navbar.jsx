@@ -7,14 +7,12 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <>
-      {/* Top Bar */}
       <div className="topbar">
         <p>Lorem ipsum dolor</p>
         <p>Lorem ipsum dolor</p>
         <p>Lorem ipsum dolor</p>
       </div>
 
-      {/* Navbar */}
       <div className="navbar">
         <div className="nav-left">
           <img src='./Logo.png' alt="logo" width={40} />
@@ -33,7 +31,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menu */}
       <div className="menu-bar">
         <ul>
           <li>SHOP</li>

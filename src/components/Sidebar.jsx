@@ -16,13 +16,11 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
 
-      {/* Customizable */}
       <div className="custom">
         <input type="checkbox" />
         <span>CUSTOMIZABLE</span>
       </div>
 
-      {/* Sections */}
       {sections.map((item, index) => (
         <div key={index} className="section">
           <div className="section-header">

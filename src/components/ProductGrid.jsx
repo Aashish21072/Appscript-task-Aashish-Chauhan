@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "./ProductGrid.css";
 
-export default function ProductGrid() {
+export default function ProductGrid({ showSidebar }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function ProductGrid() {
   }, []);
 
   return (
-    <div className="product-grid">
+    <div className={`product-grid ${showSidebar ? "with-sidebar" : "full-width"}`}>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

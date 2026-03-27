@@ -2,11 +2,9 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* This ensures all cards in a row are the same height */
   height: 100%; 
 }
 
-/* IMAGE BOX - Locked Square */
 .image-box {
   background: #fff;
   width: 100%;
@@ -21,16 +19,14 @@
 .product-img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Keeps API images from stretching */
+  object-fit: contain; 
   padding: 10px;
 }
 
-/* INFO SECTION - Locked Height */
 .product-info-row {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /* Set a fixed height that fits 2 lines of text */
   height: 60px; 
 }
 
@@ -41,13 +37,12 @@
 
 .product-name {
   font-size: 14px;
-  font-weight: 600; /* Matching your sidebar style */
+  font-weight: 600; 
   text-transform: uppercase;
   color: #000;
   margin: 0;
   line-height: 1.2;
 
-  /* This allows 2 lines then adds "..." (The modern way to truncate) */
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

@@ -1,14 +1,23 @@
 import { Link } from "react-router-dom";
 import "./ProductTopbar.css";
 
-export default function ProductTopbar() {
+export default function ProductTopbar({ showSidebar, setShowSidebar }) {
   return (
     <div className="product-topbar">
       <div className="topbar-left">
         <span className="items-count">3425 ITEMS</span>
-        <div className="filter-toggle">
-          <span className="arrow-left">‹</span>
-          <span className="filter-text">HIDE FILTER</span>
+
+        <div
+          className="filter-toggle"
+          onClick={() => setShowSidebar(!showSidebar)}
+        >
+          <span className="arrow-left">
+            {showSidebar ? "‹" : "›"}
+          </span>
+
+          <span className="filter-text">
+            {showSidebar ? "HIDE FILTER" : "SHOW FILTER"}
+          </span>
         </div>
       </div>
 
