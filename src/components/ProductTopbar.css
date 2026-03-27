@@ -1,0 +1,96 @@
+.product-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0; /* Vertical padding only, assuming a container handles sides */
+  margin: 0 40px;  /* Or match your site's side margins */
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  background: #ffffff; /* Clean white background */
+  font-family: sans-serif;
+}
+
+/* LEFT SECTION */
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.items-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.arrow-left {
+  font-size: 18px;
+  color: #888;
+}
+
+.filter-text {
+  font-size: 13px;
+  color: #888;
+  text-decoration: underline; /* Exactly like the image */
+  text-underline-offset: 3px;
+}
+
+/* RIGHT SECTION (Dropdown) */
+.sort-dropdown {
+  position: relative;
+   font-weight: 600;
+}
+
+.sort-dropdown summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Removes default arrow in Safari/Chrome */
+.sort-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.arrow-down {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* DROPDOWN BOX */
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: #fff;
+  width: 250px;
+  padding: 10px 0;
+  z-index: 100;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.08);
+  text-align: right;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 25px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.dropdown-menu a:hover {
+  background: #f9f9f9;
+}

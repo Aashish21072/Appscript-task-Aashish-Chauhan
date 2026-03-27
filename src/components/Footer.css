@@ -1,0 +1,142 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 50px 60px;
+}
+
+/* TOP */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.footer-left h4,
+.footer-right h4 {
+  font-size: 18px;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-left p,
+.footer-right p {
+  font-size: 12px;
+  color: #bbb;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  margin: 4px 0;   /* ✅ instead of padding */
+}
+
+.footer-right{
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right h4,
+.footer-right p {
+  text-align: right;
+}
+
+.footer-left{
+  flex: 2;
+}
+
+.footer-right .currency-row{
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+/* INPUT */
+.subscribe {
+  display: flex;
+  margin-top: 15px;
+}
+
+.subscribe input {
+  background: #fff;
+  border: 1px solid #333;
+  padding: 14px;
+  color: #000;
+  width: 320px;
+}
+
+.subscribe button {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* DIVIDER */
+.footer-divider {
+  border-top: 1px solid #222;
+  margin: 30px 0;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-col p {
+  font-size: 12px;
+  color: #bbb;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+/* PAYMENTS */
+.payments {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payments span {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+/* COPY */
+.footer-copy {
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.social-icons svg {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
