@@ -1,10 +1,16 @@
 .sidebar {
   width: 250px;
   flex-shrink: 0;
-  padding-right: 20px;
+  padding: 20px;
   font-family: sans-serif;
-  margin-left: 50px;
+  background: #fff;
   transition: all 0.3s ease;
+}
+
+.sidebar.hide {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .custom {
@@ -13,19 +19,6 @@
   gap: 10px;
   padding: 15px 0;
   border-bottom: 1px solid #e5e5e5;
-  cursor: pointer;
-}
-
-.custom input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
-.custom span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #000;
 }
 
 .section {
@@ -36,73 +29,29 @@
 .section-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   cursor: pointer;
-}
-
-.section-header span {
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
 }
 
 .section-sub {
   font-size: 13px;
-  color: #444;
   margin-top: 6px;
-}
-
-.section-header svg {
-  font-size: 18px;
-  color: #333;
-}
-
-@media (max-width: 1024px) {
-  .sidebar {
-    width: 200px;
-    margin-left: 20px;
-  }
-
-  .section-header span {
-    font-size: 13px;
-  }
-
-  .section-sub {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
     top: 0;
-    left: -100%;   
-    width: 260px;
-    height: 100vh;
-    background: #fff;
+    left: -100%;
+    height: 100%;
+    width: 80%;
     z-index: 1000;
-    padding: 20px;
-    margin-left: 0;
-    overflow-y: auto;
   }
 
-  .sidebar.active {
+  .sidebar.show {
     left: 0;
   }
-}
 
-@media (max-width: 480px) {
-  .sidebar {
-    width: 220px;
-    padding: 15px;
-  }
-
-  .custom span,
-  .section-header span {
-    font-size: 13px;
-  }
-
-  .section-sub {
-    font-size: 11px;
+  .sidebar.hide {
+    left: -100%;
   }
 }

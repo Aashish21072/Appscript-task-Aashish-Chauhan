@@ -1,7 +1,7 @@
 import { FiChevronDown } from "react-icons/fi";
 import './Sidebar.css';
 
-export default function Sidebar() {
+export default function Sidebar({ showSidebar }) {
   const sections = [
     "IDEAL FOR",
     "OCCASION",
@@ -14,8 +14,8 @@ export default function Sidebar() {
   ];
 
   return (
-    <div className="sidebar">
-
+    <div className={`sidebar ${showSidebar ? "show" : "hide"}`}>
+      
       <div className="custom">
         <input type="checkbox" />
         <span>CUSTOMIZABLE</span>

@@ -1,15 +1,15 @@
-import { Link } from "react-router-dom";
 import "./ProductTopbar.css";
 
 export default function ProductTopbar({ showSidebar, setShowSidebar, setSortType }) {
   return (
     <div className="product-topbar">
+      
       <div className="topbar-left">
         <span className="items-count">3425 ITEMS</span>
 
         <div
           className="filter-toggle"
-          onClick={() => setShowSidebar(!showSidebar)}
+          onClick={() => setShowSidebar(prev => !prev)} // ✅ safer
         >
           <span className="arrow-left">
             {showSidebar ? "‹" : "›"}
@@ -36,6 +36,7 @@ export default function ProductTopbar({ showSidebar, setShowSidebar, setSortType
           </div>
         </details>
       </div>
+
     </div>
   );
 }

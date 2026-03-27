@@ -7,7 +7,7 @@ import ProductGrid from "../components/ProductGrid";
 import Footer from "../components/Footer";
 
 export default function Home() {
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
   const [sortType, setSortType] = useState("recommended");
 
   return (
@@ -22,7 +22,9 @@ export default function Home() {
       />
 
       <div style={{ display: "flex" }}>
-        {showSidebar && <Sidebar />}
+        
+        <Sidebar showSidebar={showSidebar} />
+
         <ProductGrid showSidebar={showSidebar} sortType={sortType} />
       </div>
 
