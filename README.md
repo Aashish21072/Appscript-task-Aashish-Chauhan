@@ -1,15 +1,10 @@
 # Product Listing Page (PLP)
-A responsive product listing page built using Next.js (App Router) with server-side rendering and API integration.
+
+A responsive product listing page built using React with API integration and modern UI design.
 
 # 🚀 Features
-Product listing using API
-Server-side rendering (SSR)
-Sorting (Price, Popular, Newest)
-Responsive design (Mobile + Tablet)
-Clean component-based structure
-
-# Tech Stack
-Next.js
-React
-CSS (No frameworks)
-Fake Store API
+🛒 Product listing using API
+🔄 Dynamic sorting (Price, Popular, Newest)
+📱 Fully responsive (Mobile + Tablet + Desktop)
+🎯 Filter sidebar with show/hide functionality
+🧩 Clean component-based architecture

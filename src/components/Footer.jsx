@@ -6,10 +6,8 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
 
-      {/* TOP */}
       <div className="footer-top">
 
-        {/* LEFT */}
         <div className="footer-left">
           <h4>BE THE FIRST TO KNOW</h4>
           <p>Sign up for updates from our store</p>
@@ -20,7 +18,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* RIGHT */}
         <div className="footer-right">
           <h4>CONTACT US</h4>
           <p>+44 221 133 5360</p>
@@ -34,7 +31,6 @@ export default function Footer() {
 
       <div className="footer-divider"></div>
 
-      {/* BOTTOM */}
       <div className="footer-bottom">
 
         <div className="footer-col">
