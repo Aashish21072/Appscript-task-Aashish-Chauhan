@@ -8,20 +8,22 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState(true);
+  const [sortType, setSortType] = useState("recommended");
 
   return (
     <>
       <Navbar />
       <Hero />
 
-      <ProductTopbar 
-        showSidebar={showSidebar} 
-        setShowSidebar={setShowSidebar} 
+      <ProductTopbar
+        showSidebar={showSidebar}
+        setShowSidebar={setShowSidebar}
+        setSortType={setSortType}
       />
 
       <div style={{ display: "flex" }}>
         {showSidebar && <Sidebar />}
-        <ProductGrid showSidebar={showSidebar} />
+        <ProductGrid showSidebar={showSidebar} sortType={sortType} />
       </div>
 
       <Footer />

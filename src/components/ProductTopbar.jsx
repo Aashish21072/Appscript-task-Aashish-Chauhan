@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ProductTopbar.css";
 
-export default function ProductTopbar({ showSidebar, setShowSidebar }) {
+export default function ProductTopbar({ showSidebar, setShowSidebar, setSortType }) {
   return (
     <div className="product-topbar">
       <div className="topbar-left">
@@ -28,11 +28,11 @@ export default function ProductTopbar({ showSidebar, setShowSidebar }) {
           </summary>
 
           <div className="dropdown-menu">
-            <Link to="/">RECOMMENDED</Link>
-            <Link to="/">NEWEST FIRST</Link>
-            <Link to="/">POPULAR</Link>
-            <Link to="/">PRICE: HIGH TO LOW</Link>
-            <Link to="/">PRICE: LOW TO HIGH</Link>
+            <p onClick={() => setSortType("recommended")}>RECOMMENDED</p>
+            <p onClick={() => setSortType("newest")}>NEWEST FIRST</p>
+            <p onClick={() => setSortType("popular")}>POPULAR</p>
+            <p onClick={() => setSortType("high")}>PRICE: HIGH TO LOW</p>
+            <p onClick={() => setSortType("low")}>PRICE: LOW TO HIGH</p>
           </div>
         </details>
       </div>
